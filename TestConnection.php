@@ -10,6 +10,7 @@
   {
     $connection = new PDO("mysql:host=$host:$port;dbname=$database", $username, $password);
     echo "Sukses terkoneksi ke database" . PHP_EOL;
+    $connection = null;
   }catch(PDOException $exception)
   {
     echo "Error terkoneks ke database" . $exception->getMessage() . PHP_EOL;
